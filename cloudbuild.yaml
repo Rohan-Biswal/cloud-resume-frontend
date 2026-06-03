@@ -1,0 +1,10 @@
+steps:
+- name: gcr.io/google.com/cloudsdktool/cloud-sdk
+  entrypoint: bash
+  args:
+    - -c
+    - |
+      gsutil -m rsync -R -d . gs://rohan-resume-frontend-2026
+
+options:
+  logging: CLOUD_LOGGING_ONLY
